@@ -1,11 +1,17 @@
 package upce.nnpia_cv_1.Controllers;
 
 import upce.nnpia_cv_1.Services.GreetingService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import upce.nnpia_cv_1.Services.IGreetingService;
 
+@Controller
 public class SetController {
-    private GreetingService greetingService;
+    private IGreetingService greetingService;
 
-    public void setGreetingService(GreetingService greetingService){
+    @Autowired
+    public void setGreetingService(IGreetingService greetingService){
+        System.out.println("SetContoller executed");
         this.greetingService = greetingService;
     }
 

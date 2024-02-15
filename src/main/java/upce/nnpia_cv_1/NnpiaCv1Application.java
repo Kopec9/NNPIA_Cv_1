@@ -9,9 +9,13 @@ import upce.nnpia_cv_1.Controllers.MyController;
 public class NnpiaCv1Application {
 	public static void main(String[] args) {
 
-		ApplicationContext context = SpringApplication.run(NnpiaCv1Application.class, args);
+//		ApplicationContext context = (ApplicationContext) SpringApplication.run(NnpiaCv1Application.class, args);
 
-		MyController myController = context
+//		MyController myController = context.getBean(MyController.class);
+//
+//		myController.sayHello();
+
+		SpringApplication.run(NnpiaCv1Application.class, args);
 
 	}
 
