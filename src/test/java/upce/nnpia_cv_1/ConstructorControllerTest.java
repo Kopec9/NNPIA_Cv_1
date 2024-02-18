@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import upce.nnpia_cv_1.Services.GreetingService;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 @SpringBootTest
 public class ConstructorControllerTest {
 
@@ -20,6 +22,7 @@ public class ConstructorControllerTest {
 
     @Test
     void SayHello(){
-        System.out.println(constructorController.sayHello());
+        String test = constructorController.sayHello();
+        assertEquals("Hey", test);
     }
 }

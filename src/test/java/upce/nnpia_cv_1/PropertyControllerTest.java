@@ -7,6 +7,8 @@ import upce.nnpia_cv_1.Services.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 @SpringBootTest
 public class PropertyControllerTest {
     @Autowired
@@ -14,12 +16,12 @@ public class PropertyControllerTest {
 
     @BeforeEach
     void setUp(){
-        //propertyController = new PropertyController();
         propertyController.greetingService = new GreetingService();
     }
 
     @Test
     void sayHello(){
-        System.out.println(propertyController.sayHello());
+        String test = propertyController.sayHello();
+        assertEquals("Hey", test);
     }
 }

@@ -10,7 +10,7 @@ import upce.nnpia_cv_1.Services.IGreetingService;
 public class ConstructorController {
     private final IGreetingService greetingService;
     @Autowired
-    public ConstructorController(IGreetingService greetingService) {
+    public ConstructorController(GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 

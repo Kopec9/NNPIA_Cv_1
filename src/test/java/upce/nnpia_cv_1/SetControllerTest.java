@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Test;
 import upce.nnpia_cv_1.Controllers.SetController;
 import upce.nnpia_cv_1.Services.GreetingService;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class SetControllerTest {
     SetController setController;
 
@@ -16,6 +18,7 @@ public class SetControllerTest {
 
     @Test
     void SayHello(){
-        System.out.println(setController.sayHello());
+        String test = setController.sayHello();
+        assertEquals("Hello, World!", test);
     }
 }

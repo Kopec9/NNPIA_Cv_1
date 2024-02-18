@@ -10,8 +10,7 @@ public class SetController {
     private IGreetingService greetingService;
 
     @Autowired
-    public void setGreetingService(IGreetingService greetingService){
-        System.out.println("SetContoller executed");
+    public void setGreetingService(GreetingService greetingService){
         this.greetingService = greetingService;
     }
 
